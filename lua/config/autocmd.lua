@@ -7,6 +7,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 	end
 })
 
+-- Should open last saved session on opening vim, doesnt for now.
+-- You can use s when opening it and it works tho 
 vim.api.nvim_create_autocmd('VimEnter', {
 	nested = true,
 	desc = 'Load last session when opening buffer',
@@ -18,6 +20,7 @@ vim.api.nvim_create_autocmd('VimEnter', {
 	end
 })
 
+-- Sets some parameters for compatibility with gdscript
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "gdscript",
 	callback = function ()

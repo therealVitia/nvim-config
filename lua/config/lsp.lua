@@ -7,6 +7,7 @@ for _, server in ipairs(servers) do
 	vim.lsp.enable(server)
 end
 
+-- Weird specific thing for godot
 local projectfile = vim.fn.getcwd() .. '/project.godot'
 if projectfile then
 	vim.lsp.config("gdscript", {
